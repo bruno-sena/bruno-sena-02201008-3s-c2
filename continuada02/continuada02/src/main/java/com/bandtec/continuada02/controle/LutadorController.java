@@ -31,7 +31,7 @@ public class LutadorController {
 
     @GetMapping
     public ResponseEntity getLutadores() {
-        List<Lutador> lutadores = repository.findOrderByForca();
+        List<Lutador> lutadores = repository.findOrderByForcaGolpe();
 
         if (lutadores.isEmpty()) {
             return ResponseEntity.noContent().build();
